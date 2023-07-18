@@ -1,0 +1,21 @@
+$product-list-padding: 0;
+$product-list-display: flex;
+$product-list-flex-wrap: wrap;
+$product-list-justify-content: space-between;
+$product-list-align-items: stretch;
+
+.product-list {
+    padding: $product-list-padding;
+    display: $product-list-display;
+    flex-wrap: $product-list-flex-wrap;
+    justify-content: $product-list-justify-content;
+    align-items: $product-list-align-items;
+}
+
+$product-list-item-list-style: none;
+$product-list-item-width: 32%;
+
+.product-list__item {
+    list-style: $product-list-item-list-style;
+    width: $product-list-item-width;
+}
