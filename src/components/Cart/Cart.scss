@@ -1,0 +1,36 @@
+$margin-bottom-small: 0.7em;
+$margin-bottom-medium: 0.3em;
+$margin-left-small: 0.5em;
+$total-font-size: 1.5em;
+$total-line-height: 1.1em;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__body {
+  margin-bottom: $margin-bottom-small;
+}
+
+.cart-item {
+  margin-bottom: $margin-bottom-medium;
+  @include flex-center;
+}
+
+.cart-item__name {
+  margin-left: $margin-left-small;
+  vertical-align: middle;
+}
+
+.cart-item__price {
+  font-weight: bold;
+}
+
+.cart__total {
+  font-weight: bold;
+  font-size: $total-font-size;
+  line-height: $total-line-height;
+  text-align: right;
+}
