@@ -1,0 +1,37 @@
+$margin-bottom-small: 0.3em;
+$margin-bottom-medium: 0.7em;
+$font-weight-bold: bold;
+$font-size-large: 1.5em;
+$line-height-large: 1.1em;
+$text-align-right: right;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__body {
+  margin-bottom: $margin-bottom-medium;
+}
+
+.cart-item {
+  margin-bottom: $margin-bottom-small;
+  @include flex-center;
+}
+
+.cart-item__name {
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+.cart-item__price {
+  font-weight: $font-weight-bold;
+}
+
+.cart__total {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-large;
+  line-height: $line-height-large;
+  text-align: $text-align-right;
+}
