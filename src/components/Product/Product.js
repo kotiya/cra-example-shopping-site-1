@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 
 class Product extends Component {
     handleClick = () => {
@@ -17,7 +18,7 @@ class Product extends Component {
 
         return (
             <div className="product thumbnail">
-                <img src={image} alt="product" />
+                <Image src={image} alt="product" />
                 <div className="caption">
                     <h3>{name}</h3>
                     <div className="product__price">{price} {currency}</div>

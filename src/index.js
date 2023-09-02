@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
     products: productsReducer
 });
 
-let store = createStore(
+const store = createStore(
     rootReducer,
     {
         products: productsData // initial store values
@@ -21,9 +21,16 @@ let store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // for debugging
 );
 
-render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-);
+const Root = () => {
+    useEffect(() => {
+        // Add any necessary interactions with the window object here
+    }, []);
+
+    return (
+        <Provider store={store}>
+            <App />
+        </Provider>
+    );
+};
+
+render(<Root />, document.getElementById('root'));

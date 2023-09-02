@@ -1,27 +1,32 @@
 {
   "name": "react-shop",
   "version": "0.2.0",
-  "homepage": ".",
   "private": true,
-  "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "react-scripts": "^5.0.1"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "next test",
+    "eject": "next eject",
+    "predeploy": "next build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "bootstrap": "^3.4.1",
-    "prop-types": "^15.8.1",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "next": "13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "bootstrap": "^3.4.1",
+    "prop-types": "^15.8.1",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+  "homepage": ".",
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "react-scripts": "^5.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"
